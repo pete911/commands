@@ -11,8 +11,9 @@
  - show processes using tcp `for pid in $(netstat -avnp tcp | tail -n +3 | awk '{print $9}' | uniq);do;ps -p $pid | tail -n +2;done`
  - show processes using upd `for pid in $(netstat -avnp udp | tail -n +3 | awk '{print $8}' | uniq);do;ps -p $pid | tail -n +2;done`
 
-## arp
- - show arp cache `arp -l`
+## show all devices on the local network
+ - ping broadcast `ping 255.255.255`
+ - show arp cache `arp -a`
 
 ## connections tracking table
  - show connections `cat /proc/net/nf_conntrack` (router/server NAT/SNAT, netfilter, ...)
