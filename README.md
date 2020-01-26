@@ -15,6 +15,11 @@
  - ping broadcast `ping 255.255.255`
  - show arp cache `arp -a`
 
+## IP changed MAC it is at
+Send ARP to response to braodcast MAC (FF:FF:FF:FF:FF:FF) 'Gratuitous ARP' <IP> is on <interface>:
+ - mac os `arping -PU -i <interface> <IP>` e.g. `arping -PU -i eth0 172.16.42.161`
+ - linux `arping -A -I <interface> <IP>` e.g. `arping -A -I eth0 172.16.42.161`
+
 ## connections tracking table
  - show connections `cat /proc/net/nf_conntrack` (router/server NAT/SNAT, netfilter, ...)
 
