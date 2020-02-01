@@ -22,6 +22,7 @@ Send ARP to response to braodcast MAC (FF:FF:FF:FF:FF:FF) 'Gratuitous ARP' <IP> 
 
 ## connections tracking table
  - show connections `cat /proc/net/nf_conntrack` (router/server NAT/SNAT, netfilter, ...)
+ - `contrack -L` [netfilter](https://netfilter.org/projects/conntrack-tools/index.html)
 
 ## ip tables
 List
