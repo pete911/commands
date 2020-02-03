@@ -10,6 +10,10 @@
  - udp `netstat -avnp udp`
  - show processes using tcp `for pid in $(netstat -avnp tcp | tail -n +3 | awk '{print $9}' | uniq);do;ps -p $pid | tail -n +2;done`
  - show processes using upd `for pid in $(netstat -avnp udp | tail -n +3 | awk '{print $8}' | uniq);do;ps -p $pid | tail -n +2;done`
+ - `ss -s` socket summary `-a` - all sockets, `-u -a` - upd sockets, `-t -a` - tcp sockets
+ - `cat /proc/net/tcp` - list of open tcp sockets
+ - `cat /proc/net/udp` - list of open udp sockets
+ - `cat /proc/net/raw` - list of open raw sockets
 
 ## show all devices on the local network
  - ping broadcast `ping 255.255.255`
