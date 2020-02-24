@@ -15,6 +15,9 @@
  - `cat /proc/net/udp` - list of open udp sockets
  - `cat /proc/net/raw` - list of open raw sockets
 
+## show MAC address of remote host
+ - `arp <IP/host>`
+
 ## show all devices on the local network
  - ping broadcast `ping 255.255.255`
  - show arp cache `arp -a`
