@@ -21,6 +21,8 @@
 ## show all devices on the local network
  - ping broadcast `ping 255.255.255`
  - show arp cache `arp -a`
+or
+ - `namp -sn <CIDR>` e.g. `nmap -sn 192.168.1.1/24`
 
 ## IP changed MAC it is at
 Send ARP to response to braodcast MAC (FF:FF:FF:FF:FF:FF) 'Gratuitous ARP' <IP> is on <interface>:
