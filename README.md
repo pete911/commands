@@ -1,6 +1,7 @@
 # commands
 
  - [networking](networking/README.md)
+ - [kube](kube/README.md)
  - [vim](vim/README.md)
  - [git](git/README.md)
 
