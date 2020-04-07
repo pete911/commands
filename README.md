@@ -3,6 +3,7 @@
  - [networking](networking/README.md)
  - [kube](kube/README.md)
  - [vim](vim/README.md)
+ - [awk](awk/README.md)
  - [git](git/README.md)
 
 # keybindings

@@ -1,5 +1,10 @@
 # vim
 
+## misc
+
+ - set vertical line at column 80 `:set colorcolumn=80` or `:set cc=80`
+ - unset vertical line`:set colorcolumn=` or `:set cc=`
+
 ## netrw
 
 ### help
