@@ -4,7 +4,7 @@
 
  - set vertical line at column 80 `:set colorcolumn=80` or `:set cc=80`
  - unset vertical line`:set colorcolumn=` or `:set cc=`
-
+ - format json `:%!python -m json.tool`
 ## netrw
 
 ### help
