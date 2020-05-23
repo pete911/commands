@@ -13,3 +13,32 @@
 # config
 
  - [vimrc](vim/.vimrc)
+
+# packages
+
+## brew
+ - awscli
+ - curl
+ - git
+ - go
+ - helm
+ - jq
+ - kubectl
+ - minikube
+ - nmap
+ - vim
+ - watch
+ - wget
+ - zsh
+ 
+## brew cask
+ - arduino
+ - docker
+ - iterm2
+ - keepassx
+ - macvim
+ - spotify
+ - vagrant
+ - virtualbox
+ - whatsapp
+ - wireshark
