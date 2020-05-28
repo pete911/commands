@@ -2,7 +2,7 @@
 
 ## outside of cluster
 
-#### cluster http access
+### cluster access
 
  - [local proxy](https://kubernetes.io/docs/tasks/access-kubernetes-api/http-proxy-access-api/)
 `kubectl proxy –port 8080` pod can then be accessed on http://localhost:8080/api/v1/namespaces/default/pods
@@ -10,29 +10,30 @@
 `kubectl port-forward <pod> <local-port>:<pod-port>`
  - run "debug" pod, exec inside and run relevant debug commands
 
-### Monitor cluster
+### monitor cluster
 
- - `kubectl cluster-info` quick check if cluster is accessible
- - watch master nodes `watch kubectl get nodes --sort-by=.metadata.creationTimestamp --selector="node-role.kubernetes.io/master"`
- - watch worker nodes `watch kubectl get nodes --sort-by=.metadata.creationTimestamp -l "kubernetes.io/role=node"`
- - watch failed hd deploys `watch -d 'kubectl get hd -o=custom-columns=NAME:.metadata.name,STATUS:.spec.status | grep failed'`
- - get top 10 nodes with highest CPU usage `kubectl top nodes --selector="node-role.kubernetes.io/node" | sort --reverse --key 3 --numeric | head -10`
+ - **cluster info** `kubectl cluster-info` quick check if cluster is accessible
+ - **master nodes** `watch 'kubectl get nodes --sort-by=.metadata.creationTimestamp --selector="node-role.kubernetes.io/master"'`
+ - **worker nodes** `watch 'kubectl get nodes --sort-by=.metadata.creationTimestamp -l "kubernetes.io/role=node"'`
+ - **top 10 nodes with highest CPU** `kubectl top nodes --selector="node-role.kubernetes.io/node" | sort --reverse --key 3 --numeric | head -10`
 
-### pods
+### monitor pods
 
-get running/not-running pods
-```
-watch kubectl get pods --field-selector status.phase=Running
-watch kubectl get pods --field-selector status.phase!=Running
-```
+ - **not-running pods** `watch 'kubectl get pods --field-selector status.phase!=Running'`
+ - **running pods** `watch 'kubectl get pods --field-selector status.phase=Running'`
 
-inspect pods
-```
-kubectl get pods -n <namespace>
-kubectl describe pod -n <namespace> <pod>
-kubectl logs -n <namespace> <pod>
-kubectl exec -it -n <namespace> <pod> [sh|bash]
-```
+### inspect pods
+
+ - `kubectl get pods -n <namespace>`
+ - `kubectl describe pod -n <namespace> <pod>`
+ - `kubectl logs -n <namespace> <pod>`
+ - `kubectl exec -it -n <namespace> <pod> [sh|bash]`
+
+### cluster autoscaler
+
+ - **check status** `kubectl get deployments -n kube-system cluster-autoscaler`
+ - **enable** `kubectl scale deployment.v1.apps/cluster-autoscaler --replicas=1 -n kube-system`
+ - **disable** `kubectl scale deployment.v1.apps/cluster-autoscaler --replicas=0 -n kube-system`
 
 ### restart deployment/daemonset
 
