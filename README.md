@@ -13,6 +13,7 @@
 # config
 
  - [vimrc](vim/.vimrc)
+ - [.ssh](ssh/config)
 
 # packages
 
