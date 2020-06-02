@@ -19,8 +19,9 @@
 
 ### monitor pods
 
- - **not-running pods** `watch 'kubectl get pods --field-selector status.phase!=Running'`
- - **running pods** `watch 'kubectl get pods --field-selector status.phase=Running'`
+ - **failed pods** `watch 'kubectl get pods -A --field-selector status.phase!=Running,status.phase!=Succeeded'`
+ - **not-running pods** `watch 'kubectl get pods -A --field-selector status.phase!=Running'`
+ - **running pods** `watch 'kubectl get pods -A --field-selector status.phase=Running'`
 
 ### inspect pods
 
