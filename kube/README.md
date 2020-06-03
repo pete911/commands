@@ -23,6 +23,9 @@
  - **not-running pods** `watch 'kubectl get pods -A --field-selector status.phase!=Running'`
  - **running pods** `watch 'kubectl get pods -A --field-selector status.phase=Running'`
 
+### debug
+ - **check pods start time** `kubectl get pod -n <namespace> -o jsonpath='{.items[*].status.startTime}' | tr -s '[[:space:]]' '\n' | sort`
+
 ### inspect pods
 
  - `kubectl get pods -n <namespace>`
