@@ -8,7 +8,6 @@
 `kubectl proxy –port 8080` pod can then be accessed on http://localhost:8080/api/v1/namespaces/default/pods
  - [forward port](https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/)
 `kubectl port-forward <pod> <local-port>:<pod-port>`
- - run "debug" pod, exec inside and run relevant debug commands
 
 ### monitor cluster
 
@@ -27,6 +26,7 @@ To change order of displayed columns, pipe the output to `awk` e.g. append the f
  - **running pods** `watch 'kubectl get pods -A --field-selector status.phase=Running'`
 
 ### debug
+ - **debug pod** `kubectl run debug -n <namespace> --image=pete911/debug-pod:<version> --rm -it --restart=Never -- sh`
  - **check pods start time** `kubectl get pod -n <namespace> -o jsonpath='{.items[*].status.startTime}' | tr -s '[[:space:]]' '\n' | sort`
 
 ### inspect pods
