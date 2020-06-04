@@ -18,7 +18,7 @@ To change order of displayed columns, pipe the output to `awk` e.g. append the f
  - **worker nodes** `watch 'kubectl get nodes --sort-by=.metadata.creationTimestamp -l "kubernetes.io/role=node"'`
  - **top 10 nodes with highest CPU** `kubectl top nodes --selector="node-role.kubernetes.io/node" | sort --reverse --key 3 --numeric | head -10`
  - **last 20 events** `watch 'kubectl get events -A --sort-by=.metadata.creationTimestamp | tail -n 20'`
- - **last 20 error/warning events** `watch $'kubectl get events -A --sort-by=.metadata.creationTimestamp | awk \'$3 != "Normal"\' | tail -n 20'`
+ - **last 20 error/warning events** `watch 'kubectl get events -A --sort-by=.metadata.creationTimestamp --field-selector "type!=Normal" | tail -n 20'`
 
 ### monitor pods
 
