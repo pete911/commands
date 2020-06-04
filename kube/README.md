@@ -12,6 +12,7 @@
 
 ### monitor cluster
 
+To change order of displayed columns, pipe the output to `awk` e.g. append the following `| awk {'print $1" " $2" " $4'} | column -t`
  - **cluster info** `kubectl cluster-info` quick check if cluster is accessible
  - **master nodes** `watch 'kubectl get nodes --sort-by=.metadata.creationTimestamp --selector="node-role.kubernetes.io/master"'`
  - **worker nodes** `watch 'kubectl get nodes --sort-by=.metadata.creationTimestamp -l "kubernetes.io/role=node"'`
