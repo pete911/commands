@@ -29,9 +29,9 @@ To change order of displayed columns, pipe the output to `awk` e.g. append the f
  - **debug pod** `kubectl run debug -n <namespace> --image=pete911/debug-pod:<version> --rm -it --restart=Never -- sh`
  - **check pods start time** `kubectl get pod -n <namespace> -o jsonpath='{.items[*].status.startTime}' | tr -s '[[:space:]]' '\n' | sort`
  - **check pod volumes on the node**
-  - get pod uid `kubectl get pod -n <namespace> <pod-name> -o 'jsonpath={.metadata.uid}'`
-  - ssh onto the node (get node ip either from `kubectl get pod ... -o wide` or `kubectl describe pod ...`
-  - inspect volumes `sudo ls -lh /var/lib/kubelet/pods/<pod-uid>/volumes`
+    - get pod uid `kubectl get pod -n <namespace> <pod-name> -o 'jsonpath={.metadata.uid}'`
+    - ssh onto the node (get node ip either from `kubectl get pod ... -o wide` or `kubectl describe pod ...`
+    - inspect volumes `sudo ls -lh /var/lib/kubelet/pods/<pod-uid>/volumes`
 
 ### inspect pods
 
