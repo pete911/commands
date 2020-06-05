@@ -32,6 +32,7 @@ To change order of displayed columns, pipe the output to `awk` e.g. append the f
     - get pod uid `kubectl get pod -n <namespace> <pod-name> -o 'jsonpath={.metadata.uid}'`
     - ssh onto the node (get node ip either from `kubectl get pod ... -o wide` or `kubectl describe pod ...`
     - inspect volumes `sudo ls -lh /var/lib/kubelet/pods/<pod-uid>/volumes`
+    - inspect container logs `sudo ls /var/log/pods/<pod-uid>/<container>/`
 
 ### inspect pods
 
