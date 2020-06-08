@@ -19,6 +19,7 @@
 
 ## brew
  - awscli
+ - bat
  - curl
  - git
  - go
