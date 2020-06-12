@@ -19,13 +19,13 @@
 
 ## brew
  - awscli
- - bat
  - curl
  - git
  - go
  - helm
  - jq
  - kubectl
+ - kustomize
  - minikube
  - nmap
  - vim
