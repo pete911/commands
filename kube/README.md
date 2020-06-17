@@ -12,11 +12,11 @@
 ### exec command on every worker node
 
  - change `-o jsonpath` to appropriate selector for your cluster (use `kubectl get node <node> -o yaml` to see available  fields)
- - change `<user>` and `<command> <arg1> <arg2>`
+ - change `<command>` e.g. `ssh -t -q ubuntu@$i uptime` or `ssh -t ubuntu@$i 'sudo systemctl restart docker'`
 ```
 for i in $(kubectl get nodes -l "kubernetes.io/role=node" -o jsonpath='{.items[*].status.addresses[0].address}')
 do
-  ssh -t <user>@$i 'sudo <command> <arg1> <arg2>'
+  <command>
 done
 ```
 
