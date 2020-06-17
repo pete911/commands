@@ -9,6 +9,17 @@
  - [forward port](https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/)
 `kubectl port-forward <pod> <local-port>:<pod-port>`
 
+### exec command on every worker node
+
+ - change `-o jsonpath` to appropriate selector for your cluster (use `kubectl get node <node> -o yaml` to see available  fields)
+ - change `<user>` and `<command> <arg1> <arg2>`
+```
+for i in $(kubectl get nodes -l "kubernetes.io/role=node" -o jsonpath='{.items[*].status.addresses[0].address}')
+do
+  ssh -t <user>@$i 'sudo <command> <arg1> <arg2>'
+done
+```
+
 ### monitor cluster
 
 To change order of displayed columns, pipe the output to `awk` e.g. append the following `| awk {'print $1" " $2" " $4'} | column -t`
