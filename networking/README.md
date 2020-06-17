@@ -5,6 +5,10 @@
  - ssh (fixed destination) `ssh -Ng -L <local-port>:<remote-host>:<remote-port> <bastion-user>@<bastion-host>`
  - ssh (dynamic destination) `ssh -Ng -D <local-port> <bastion-user>@<bastion-host>`
 
+To use dynamic proxy with ssh (e.g. we need to execute multiple commands but ssh goes over bastion)
+ - in one terminal `ssh -Ng -D <local-port> <bastion-user>@<bastion-host>`
+ - second terminal `ssh -t -q -o ProxyCommand='nc -x 127.0.0.1:<local-port> %h %p' <user>@<host> '<command>'`
+
 ## list active sockets
  - tcp `netstat -avnp tcp`
  - udp `netstat -avnp udp`
