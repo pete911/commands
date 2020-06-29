@@ -28,6 +28,7 @@
  - kustomize
  - minikube
  - nmap
+ - tree
  - vim
  - watch
  - wget
