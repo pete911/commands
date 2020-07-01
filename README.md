@@ -22,6 +22,7 @@
  - curl
  - git
  - go
+ - gpg
  - helm
  - jq
  - kubectl
