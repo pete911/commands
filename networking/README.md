@@ -63,6 +63,7 @@ In second terminal (on the same node) create load
  - `watch -n1 'curl -s <IP|host> > /dev/null'`
 
 ## routing
+ - `netstat -nr` for mac users
  - `ip addr` display ip addresses and property information
  - `ip addr show dev <interface>` display info only for the interface
  - `ip link [show dev <interface>]` display the state of all network interfaces
