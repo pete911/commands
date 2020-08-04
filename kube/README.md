@@ -8,6 +8,7 @@
 `kubectl proxy –port 8080` pod can then be accessed on http://localhost:8080/api/v1/namespaces/default/pods
  - [forward port](https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/)
 `kubectl port-forward <pod> <local-port>:<pod-port>`
+ - service port forward `kubectl port-forward service/<svc> <local-port>:<pod-port>`
 
 ### exec command on every worker node
 
