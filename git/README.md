@@ -17,5 +17,8 @@
    - single file `git checkout <path/to/file/to/revert>`
  - **pushed**
    - checkout commit `git checkout <commit> .`
-   - commit and push `git commit -m "..."` `git push`
+   - commit and push `git commit -m "..." && git push`
 
+## tags
+Push only annotated tags, lightweight tags are for local development
+ - `git tag -m <msg> <tag> && git push --follow-tags`
