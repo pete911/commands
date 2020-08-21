@@ -33,6 +33,8 @@
  - vim
  - watch
  - wget
+ - yamllint
+ - yq
  - zsh
  
 ## brew cask
