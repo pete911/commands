@@ -2,6 +2,12 @@
 
 ## outside of cluster
 
+### cluster info
+
+ - pod cidr `kubectl cluster-info dump | grep -m 1 cluster-cidr`
+ - pod cidr per node `kubectl get nodes -o jsonpath='{.items[*].spec.podCIDR}'`
+ - service cidr `kubectl cluster-info dump | grep -m 1 service-cluster-ip-range`
+
 ### cluster access
 
  - [local proxy](https://kubernetes.io/docs/tasks/access-kubernetes-api/http-proxy-access-api/)
