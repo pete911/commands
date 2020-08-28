@@ -4,8 +4,9 @@
 
 ### cluster info
 
+ - info `kubectl cluster-info`
  - pod cidr `kubectl cluster-info dump | grep -m 1 cluster-cidr`
- - pod cidr per node `kubectl get nodes -o jsonpath='{.items[*].spec.podCIDR}'`
+ - pod cidr per node `kubectl get nodes -o jsonpath='{.items[*].spec.podCIDR}' | tr -s '[[:space:]]' '\n'`
  - service cidr `kubectl cluster-info dump | grep -m 1 service-cluster-ip-range`
 
 ### cluster access
