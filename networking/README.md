@@ -12,6 +12,7 @@ To use dynamic proxy with ssh (e.g. we need to execute multiple commands but ssh
 ## list active sockets
  - tcp `netstat -avnp tcp`
  - udp `netstat -avnp udp`
+ - unix `netstat -af unix`
  - show processes using tcp `for pid in $(netstat -avnp tcp | tail -n +3 | awk '{print $9}' | uniq);do;ps -p $pid | tail -n +2;done`
  - show processes using upd `for pid in $(netstat -avnp udp | tail -n +3 | awk '{print $8}' | uniq);do;ps -p $pid | tail -n +2;done`
  - `ss -s` socket summary `-a` - all sockets, `-u -a` - upd sockets, `-t -a` - tcp sockets
