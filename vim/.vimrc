@@ -11,6 +11,9 @@ let g:netrw_banner = 0 " no banner
 " 4 - open in previous window
 let g:netrw_browse_split = 2
 
+"set hls " highlight search
+"set is  " ignore case search
+
 set enc=utf-8
 set laststatus=2 " always show the status line
 set lazyredraw " do not redraw while running macros
@@ -18,6 +21,7 @@ set list " we do what to show tabs, to ensure we get them out of my files
 set listchars=tab:>-,trail:- " show tabs and trailing
 set nostartofline " leave my cursor where it was
 set novisualbell " don't blink
+set noswf " disable swap file
 set number " turn on line numbers
 set numberwidth=5 " We are good up to 99999 lines
 set ruler " Always show current positions along the bottom
