@@ -16,7 +16,7 @@
  - [.ssh](ssh/config)
 
 # packages
-
+On mac arm architecture, terminal needs to run under rosetta. Open finder, go to Applications, right click on terminal app: Get Info -> General -> Open using Rosetta
 ## brew
  - awscli
  - curl
