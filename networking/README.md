@@ -10,15 +10,16 @@ To use dynamic proxy with ssh (e.g. we need to execute multiple commands but ssh
  - second terminal `ssh -t -q -o ProxyCommand='nc -x 127.0.0.1:<local-port> %h %p' <user>@<host> '<command>'`
 
 ## list active sockets
- - tcp `netstat -avnp tcp`
- - udp `netstat -avnp udp`
- - unix `netstat -af unix`
+ - tcp ~~`netstat -avnp tcp`~~ `ss -tnp` or listening `ss -tnlp`
+ - udp ~~`netstat -avnp udp`~~ `ss -unp` or listening `ss -unlp`
+ - unix ~~`netstat -af unix`~~ `ss -xnp`
  - show processes using tcp `for pid in $(netstat -avnp tcp | tail -n +3 | awk '{print $9}' | uniq);do;ps -p $pid | tail -n +2;done`
  - show processes using upd `for pid in $(netstat -avnp udp | tail -n +3 | awk '{print $8}' | uniq);do;ps -p $pid | tail -n +2;done`
  - `ss -s` socket summary `-a` - all sockets, `-u -a` - upd sockets, `-t -a` - tcp sockets
  - `cat /proc/net/tcp` - list of open tcp sockets
  - `cat /proc/net/udp` - list of open udp sockets
  - `cat /proc/net/raw` - list of open raw sockets
+ - https://gist.github.com/jkstill/5095725 `/proc/net/tcp`
 
 Sockets can be used with curl e.g. `curl --unix-socket /var/run/docker.sock localhost/v1.40/images/json | jq .` (localhost is just a
 dummy hostname required by curl). To check if the file is a socket run `file <file>` or `ls -ld <file>` and check first character.
