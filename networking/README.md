@@ -20,6 +20,7 @@ To use dynamic proxy with ssh (e.g. we need to execute multiple commands but ssh
  - `cat /proc/net/udp` - list of open udp sockets
  - `cat /proc/net/raw` - list of open raw sockets
  - https://gist.github.com/jkstill/5095725 `/proc/net/tcp`
+ - [max number of tcp/ip connections](https://stackoverflow.com/questions/410616/increasing-the-maximum-number-of-tcp-ip-connections-in-linux)
 
 Sockets can be used with curl e.g. `curl --unix-socket /var/run/docker.sock localhost/v1.40/images/json | jq .` (localhost is just a
 dummy hostname required by curl). To check if the file is a socket run `file <file>` or `ls -ld <file>` and check first character.
