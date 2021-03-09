@@ -2,6 +2,7 @@
  - [filesystem](filesystem/README.md)
  - [networking](networking/README.md)
  - [kube](kube/README.md)
+ - [helm](helm/README.md)
  - [vim](vim/README.md)
  - [awk](awk/README.md)
  - [git](git/README.md)
