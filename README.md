@@ -24,7 +24,6 @@ brew install \
 arduino \
 awscli \
 curl \
-docker \
 git \
 go \
 gpg \
@@ -34,7 +33,6 @@ jq \
 keepassx \
 kubectl \
 kustomize \
-macvim \
 minikube \
 nmap \
 spotify \
@@ -45,8 +43,12 @@ virtualbox \
 watch \
 wget \
 whatsapp \
-wireshark \
 yamllint \
 yq \
 zsh
+```
+
+## brew cask
+```
+brew install --cask macvim wireshark
 ```
