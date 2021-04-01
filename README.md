@@ -17,35 +17,36 @@
  - [.ssh](ssh/config)
 
 # packages
-On mac arm architecture, terminal needs to run under rosetta. Open finder, go to Applications, right click on terminal app: Get Info -> General -> Open using Rosetta
+
 ## brew
- - awscli
- - curl
- - git
- - go
- - gpg
- - helm
- - jq
- - kubectl
- - kustomize
- - minikube
- - nmap
- - tree
- - vim
- - watch
- - wget
- - yamllint
- - yq
- - zsh
- 
-## brew cask
- - arduino
- - docker
- - iterm2
- - keepassx
- - macvim
- - spotify
- - vagrant
- - virtualbox
- - whatsapp
- - wireshark
+```
+brew install \
+arduino \
+awscli \
+curl \
+docker \
+git \
+go \
+gpg \
+helm \
+iterm2 \
+jq \
+keepassx \
+kubectl \
+kustomize \
+macvim \
+minikube \
+nmap \
+spotify \
+tree \
+vagrant \
+vim \
+virtualbox \
+watch \
+wget \
+whatsapp \
+wireshark \
+yamllint \
+yq \
+zsh
+```
