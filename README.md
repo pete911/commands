@@ -52,3 +52,8 @@ zsh
 ```
 brew install --cask macvim wireshark
 ```
+
+## go
+```
+go get -u golang.org/x/tools/...
+```
