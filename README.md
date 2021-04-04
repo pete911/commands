@@ -27,6 +27,7 @@ curl \
 git \
 go \
 gpg \
+graphviz \
 helm \
 iterm2 \
 jq \
