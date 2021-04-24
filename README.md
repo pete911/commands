@@ -14,7 +14,7 @@
 # config
 
  - [vimrc](vim/.vimrc)
- - [.ssh](ssh/config)
+ - [.ssh](ssh/README.md)
 
 # packages
 

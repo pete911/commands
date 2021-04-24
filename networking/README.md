@@ -90,5 +90,5 @@ In second terminal (on the same node) create load
  - `sudo tcpdump -i eth0 -n [tcp] port 80` port
  - `sudo tcpdump -i eth0 -n host 192.168.1.11 or host 192.168.1.15 and tcp port 80` and, or, not ...
  
- ## dns
-  - dig show only answer `dig +noall +answer <host-name>`
+## dns
+ - dig show only answer `dig +noall +answer <host-name>`
