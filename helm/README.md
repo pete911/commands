@@ -9,6 +9,8 @@
 
 ## charts
 
+Values can be overriden with `--values <values-file>.yaml` or `--set <key>=<value>` flag.
+ 
  - download chart `helm fetch <repo-name>/<chart> --version <chart-version> --untar`
  - validate chart `helm lint <chart>`
  - render chart with default values `helm tempalte <chart> > rendered.yaml`
