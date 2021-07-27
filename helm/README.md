@@ -15,7 +15,7 @@ Values can be overriden with `--values <values-file>.yaml` or `--set <key>=<valu
  - validate chart `helm lint <chart>`
  - render chart with default values `helm tempalte <chart> > rendered.yaml`
  - render chart with override values `helm tempalte <chart> --values <values-file>.yaml > rendered.yaml`
- - debug chart (dry-run) `helm install --dry-run --debug --values <values>.yaml --name <my-chart> <my-chart>`
+ - debug chart (dry-run) `helm install --dry-run --debug --values <values>.yaml <chart-name> <chart-location|<repo-name/chart>>`
 
 ## view/rollback/delete releases
 
