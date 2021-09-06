@@ -26,6 +26,7 @@ awscli \
 curl \
 git \
 go \
+google-cloud-sdk \
 gpg \
 helm \
 iterm2 \
