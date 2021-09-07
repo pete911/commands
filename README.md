@@ -36,6 +36,7 @@ kubectl \
 kustomize \
 minikube \
 nmap \
+operator-sdk \
 spotify \
 tree \
 vagrant \
