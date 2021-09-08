@@ -28,6 +28,7 @@ git \
 go \
 google-cloud-sdk \
 gpg \
+goreleaser \
 helm \
 iterm2 \
 jq \
