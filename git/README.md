@@ -26,6 +26,6 @@ Push only annotated tags, lightweight tags are for local development
 ## github pull request
 - clone original repo
 - fork repo to personal repo
-- add remote to point to personal repo e.g. `git remote add forked-version gti@github.com:<personal>/<repo>.git`
+- add remote to point to personal repo e.g. `git remote add forked-repo gti@github.com:<personal>/<repo>.git`
 - push to forked/personal repo e.g. `git push -u forked-repo <branch-name>`
 - create PR
