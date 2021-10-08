@@ -40,9 +40,7 @@ nmap \
 operator-sdk \
 spotify \
 tree \
-vagrant \
 vim \
-virtualbox \
 watch \
 wget \
 whatsapp \
