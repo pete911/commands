@@ -2,14 +2,14 @@
 
 ## branch
 
- - **create remote**
+ - create remote
    - local branch `git checkout -b <branch>`
    - push to origin `git push -u origin <branch>`
- - **delete remote** `git push origin --delete <branch>`
- - **list remote branches** `git branch -r`
- - **list merged branches** `git branch --merged`
- - **clean up stale branches** `git remote prune origin` or `git fetch -p`
- - **create branch from commit** `git branch <branch> <commit>` with checkout `git checkout -b <branch> <commit>`
+ - delete remote `git push origin --delete <branch>`
+ - list remote branches `git branch -r`
+ - list merged branches `git branch --merged`
+ - clean up stale branches `git remote prune origin` or `git fetch -p`
+ - create branch from commit `git branch <branch> <commit>` with checkout `git checkout -b <branch> <commit>`
 
 ## revert changes
  - **unstaged**
@@ -32,8 +32,8 @@ Push only annotated tags, lightweight tags are for local development
 
 ## checkout forked branch
 - add forked remote `git remote add forked-repo git@github.com:<forked-user>/<forked-repo>.git`
-- git fetch forked-repo
-- git checkout -b <branch> forked-repo/<branch>
+- `git fetch forked-repo`
+- `git checkout -b <branch> forked-repo/<branch>`
 
 ## github gh-pages
 - create branch `git checkout --orphan gh-pages`
