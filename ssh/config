@@ -39,7 +39,6 @@ Host <host-b>
   User <username>
   Port 22
   ProxyCommand ssh <host-a> nc -w 120 %h %p
-  # ProxyCommand ssh <host-a> sudo nc -w 120 %h %p
 
 # --- socks proxy/tunneling ---
 # instead of 'ssh -ND localhost:5555 example.com' to setup proxy on localhost:5555
@@ -47,3 +46,4 @@ Host <host-b>
 Host tunnel
     Hostname example.com
     DynamicForward localhost:5555
+
