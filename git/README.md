@@ -30,11 +30,6 @@ Push only annotated tags, lightweight tags are for local development
 - push to forked/personal repo e.g. `git push -u forked-repo <branch-name>`
 - create PR
 
-## checkout forked branch
-- add forked remote `git remote add forked-repo git@github.com:<forked-user>/<forked-repo>.git`
-- `git fetch forked-repo`
-- `git checkout -b <branch> forked-repo/<branch>`
-
 ## github gh-pages
 - create branch `git checkout --orphan gh-pages`
 - clean up (prepare for github pages) `git rm -rf .`
