@@ -2,7 +2,9 @@
 
 ## tunnel/port foward
 
- - ssh (fixed destination) `ssh -Ng -L <local-port>:<remote-host>:<remote-port> <bastion-user>@<bastion-host>`
+ - ssh (fixed destination) 
+   - from bastion `ssh -Ng -L <local-port>:<remote-host>:<remote-port> <bastion-user>@<bastion-host>`
+   - directly `ssh -Ng -L <local-port>:localhost:<remote-port> <remote-ssh-host>`
  - ssh (dynamic destination) `ssh -Ng -D <local-port> <bastion-user>@<bastion-host>`
 
 To use dynamic proxy with ssh (e.g. we need to execute multiple commands but ssh goes over bastion)
