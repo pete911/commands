@@ -34,6 +34,7 @@ Push only annotated tags, lightweight tags are for local development
 - check remotes `git remote`
 - `git fetch <remote>` e.g. `git fetch forked-repo`
 - `git pull <remote> <branch>` e.g. `git pull forked-repo main`
+- `git push <remote>` e.g. `git push forked-repo`
 
 ## github gh-pages
 - create branch `git checkout --orphan gh-pages`
