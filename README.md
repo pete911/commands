@@ -6,6 +6,7 @@
  - [vim](vim/README.md)
  - [awk](awk/README.md)
  - [git](git/README.md)
+ - [aws cli](awscli/README.md)
 
 # keybindings
 
