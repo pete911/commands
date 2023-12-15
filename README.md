@@ -8,6 +8,9 @@
  - [git](git/README.md)
  - [aws cli](awscli/README.md)
 
+# remap keyboard (mac)
+ - [remap-keyboard](remap-keyboard/README.md)
+
 # keybindings
 
  - [readline](readline/README.md)
