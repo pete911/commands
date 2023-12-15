@@ -17,9 +17,15 @@ e.g. if we set ESC key to caps lock, and tilda to ESC key, launchctl just runs -
 - locate keyboard you would like to remap `hidutil list` (keyboard can be listed multiple times but will have unique `ProductID`)
 - edit `~/Library/LaunchAgents/com.local.KeyRemapping.plist` - add `<string>--matching</string><string>{"ProductID":<id>}</string>` (replace `<id>` with your keyboard `ProductID`)
 - stop mapping if you have already one running `launchctl stop com.local.KeyRemapping`
-- unload, if you have already loaded one `launchctl load ~/Library/LaunchAgents/com.local.KeyRemapping.plist`
+- unload, if you have already loaded one `launchctl unload ~/Library/LaunchAgents/com.local.KeyRemapping.plist`
 - load it `launchctl load ~/Library/LaunchAgents/com.local.KeyRemapping.plist`
 - start mapping `launchctl start com.local.KeyRemapping`
+- verify mapping is running `hidutil property --matching '{"ProductID":<id>}' --get "UserKeyMapping"` (replace `<id>` with your keyboard `ProductID`)
+
+## reset mapping
+- `hidutil property --set '{"UserKeyMapping":[]}'`
+- stop mapping `launchctl stop com.local.KeyRemapping`
+- unload `launchctl unload ~/Library/LaunchAgents/com.local.KeyRemapping.plist`
 
 ## links
 
