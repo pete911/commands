@@ -6,7 +6,7 @@
  - [vim](vim/README.md)
  - [awk](awk/README.md)
  - [git](git/README.md)
- - [aws cli](awscli/README.md)
+ - [aws](aws/README.md)
 
 # remap keyboard (mac)
  - [remap-keyboard](remap-keyboard/README.md)
