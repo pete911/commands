@@ -7,6 +7,7 @@
  - [awk](awk/README.md)
  - [git](git/README.md)
  - [aws](aws/README.md)
+ - [python](python/README.md)
 
 # remap keyboard (mac)
  - [remap-keyboard](remap-keyboard/README.md)
