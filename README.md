@@ -2,6 +2,7 @@
  - [filesystem](filesystem/README.md)
  - [networking](networking/README.md)
  - [dns](dns/README.md)
+ - [docker](docker/README.md)
  - [kube](kube/README.md)
  - [helm](helm/README.md)
  - [vim](vim/README.md)

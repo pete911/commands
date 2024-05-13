@@ -1,0 +1,10 @@
+# docker
+
+ ## run netstat on all containers
+
+Prints local container IP, name and executes netstat:
+
+```
+for id in $(docker ps | awk 'NR>1 {printf("%s ",$1)}'); do echo $id; docker inspect $id | jq '.[] | .NetworkSettings.IPAddress,.Name'; docker exec $id netstat -anp; echo ""; done
+```
+
