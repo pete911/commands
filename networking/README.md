@@ -1,6 +1,6 @@
 # networking
 
-## tunnel/port foward
+## tunnel/port forward
 
  - ssh (fixed destination) 
    - from bastion `ssh -Ng -L <local-port>:<remote-host>:<remote-port> <bastion-user>@<bastion-host>`
@@ -48,10 +48,10 @@ Send ARP to response to braodcast MAC (FF:FF:FF:FF:FF:FF) 'Gratuitous ARP' <IP> 
 
 ## ip tables
 List
- - all rules by specification `sudo iptables -S`
+ - all rules by specification (how they were created) `sudo iptables -S` (-P: policy, -N: new chain, -A: append, second column is chain)
  - specific rule by specification `sudo iptables -S TCP`
- - all rules sorted by chain `sudo iptables -L`
- - specific chain `sudo iptables -L INPUT`
+ - all rules sorted by chain `sudo iptables -L -n`
+ - specific chain `sudo iptables -L INPUT -nvx`
 
 Options
  - `-t` table [filter, nat, mangle, raw], defaults to filter
