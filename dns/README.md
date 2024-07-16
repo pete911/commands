@@ -22,7 +22,7 @@
 
 ## query tools
 
-- nameservers `dig -t ns <host>` or `dig <host> NS`
+- nameservers `dig -t ns <host>` or `dig <host> NS` or `dig <host> +nssearch`
 - only answer `dig -t ns <host> +noall +answer` or `dig <host> NS +noall +answer`
 - specify nameserver `dig @<ns> <host> NS +noall +answer` e.g. `dig @1.1.1.1 cloudflare.com. NS +noall +answer`
 - return SOA record `dig <host> soa`
