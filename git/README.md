@@ -22,6 +22,8 @@
 ## tags
 Push only annotated tags, lightweight tags are for local development
  - `git tag -m <msg> <tag> && git push --follow-tags`
+ - delete local tag `git tag --delete <tag>`
+ - delete remote tag `git push --delete origin <tag>`
 
 ## github pull request
 - clone original repo
