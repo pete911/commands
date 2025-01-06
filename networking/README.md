@@ -86,6 +86,8 @@ In second terminal (on the same node) create load
 
 ### tcpdump
  - `sudo tcpdump -i eth0 -n` -i <interface>, -n do not resolve IP addresses using reverse DNS
+ - `sudo tcpdump -i eth0 -ven` -v verbose, -e print link level header on each dump line
+ - `sudo tcpdump -i eth0 -ven -T vxlan` print vxlan traffic
  - `sudo tcpdump -i eth0 -n net 10.16.0.0/16` CIDR block
  - `sudo tcpdump -i eth0 -n [src|dst] net 10.16.0.0/16` src|dst CIDR block
  - `sudo tcpdump -i eth0 -n [src|dst] host 192.168.1.100` host, src|dst host
