@@ -12,11 +12,21 @@ To use dynamic proxy with ssh (e.g. we need to execute multiple commands but ssh
  - second terminal `ssh -t -q -o ProxyCommand='nc -x 127.0.0.1:<local-port> %h %p' <user>@<host> '<command>'`
 
 ## list active sockets
- - tcp ~~`netstat -avnp tcp`~~ `ss -tnp` or listening `ss -tnlp`
- - udp ~~`netstat -avnp udp`~~ `ss -unp` or listening `ss -unlp`
- - unix ~~`netstat -af unix`~~ `ss -xnp`
+
+### netstat
+ - tcp `netstat -avnp tcp`
+ - udp `netstat -avnp udp`
+ - unix `netstat -af unix`
  - show processes using tcp `for pid in $(netstat -avnp tcp | tail -n +3 | awk '{print $9}' | uniq);do;ps -p $pid | tail -n +2;done`
  - show processes using upd `for pid in $(netstat -avnp udp | tail -n +3 | awk '{print $8}' | uniq);do;ps -p $pid | tail -n +2;done`
+
+### ss
+[ss man page](https://man7.org/linux/man-pages/man8/ss.8.html)
+ - tcp `ss -tnp` or listening `ss -tnlp`
+ - udp `ss -unp` or listening `ss -unlp`
+ - unix `ss -xnp`
+ - tcp (memory, info, one line) `ss -tmiO`
+ - watch tcp sockets that drop packets `watch "ss -tmiO | grep -v ',d0' | awk -v OFS='   \t' '{print \$1, \$2, \$3, \$5, \$6}' | sort -k 4"`
  - `ss -s` socket summary `-a` - all sockets, `-u -a` - upd sockets, `-t -a` - tcp sockets
  - `cat /proc/net/tcp` - list of open tcp sockets
  - `cat /proc/net/udp` - list of open udp sockets
@@ -74,6 +84,7 @@ In second terminal (on the same node) create load
  - `netstat -nr` for mac users
  - `ip addr` display ip addresses and property information
  - `ip addr show dev <interface>` display info only for the interface
+ - `ip -s link` show link statistics (transmit, receive, dropped, ...)
  - `ip link [show dev <interface>]` display the state of all network interfaces
  - `ip route` list all of the route entries in the kernel (does not show dummy interfaces e.g. kube-ipvs0)
  - `ip route get` display the route an address will take
