@@ -7,6 +7,12 @@
  - list repos `helm repo list`
  - search in repo `helm search repo <repo-name>`
 
+### oci repos
+- pull `helm pull oci://localhost:5000/helm-charts/mychart --version 0.1.0`
+- show `helm show all oci://localhost:5000/helm-charts/mychart --version 0.1.0`
+- render `helm template myrelease oci://localhost:5000/helm-charts/mychart --version 0.1.0`
+- ...
+
 ## charts
 
 Values can be overriden with `--values <values-file>.yaml` or `--set <key>=<value>` flag.
