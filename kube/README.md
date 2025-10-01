@@ -45,6 +45,7 @@ To change order of displayed columns, pipe the output to `awk` e.g. append the f
  - **running pods** `watch 'kubectl get pods -A --field-selector status.phase=Running'`
 
 ### debug
+ - **debug auth** `kubectl auth can-i <command>` e.g. `kubectl -n flux-system auth can-i get leases --as=system:serviceaccount:flux-system:helm-controller`
  - **debug pod** `kubectl run debug -n <namespace> --image=pete911/debug-pod:<version> --rm -it --restart=Never -- sh`
  - **check pods start time** `kubectl get pod -n <namespace> -o jsonpath='{.items[*].status.startTime}' | tr -s '[[:space:]]' '\n' | sort`
  - **check pod volumes on the node**
