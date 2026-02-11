@@ -18,7 +18,9 @@ To use dynamic proxy with ssh (e.g. we need to execute multiple commands but ssh
  - udp `netstat -avnp udp`
  - unix `netstat -af unix`
  - show processes using tcp `for pid in $(netstat -avnp tcp | tail -n +3 | awk '{print $9}' | uniq);do;ps -p $pid | tail -n +2;done`
+   - on mac, output has changed (pid is column 11 and is joined with process name on `:`) `for pid in $(netstat -avnp tcp | tail -n +3 | awk '{print $11}' | grep ':' | uniq | cut -d ':' -f 2);do;ps -p $pid | tail -n +2;done`
  - show processes using upd `for pid in $(netstat -avnp udp | tail -n +3 | awk '{print $8}' | uniq);do;ps -p $pid | tail -n +2;done`
+   - for mac, update accordingly as shown above
 
 ### ss
 [ss man page](https://man7.org/linux/man-pages/man8/ss.8.html)
